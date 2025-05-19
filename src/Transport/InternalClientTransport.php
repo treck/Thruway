@@ -10,6 +10,7 @@ use Thruway\Message\Message;
  *
  * @package Thruway\Transport
  */
+#[\AllowDynamicProperties]
 class InternalClientTransport extends AbstractTransport
 {
     /**
