@@ -51,7 +51,7 @@ class Router implements RouterInterface, EventSubscriberInterface
      *
      * @param \React\EventLoop\LoopInterface $loop
      */
-    public function __construct(LoopInterface $loop = null)
+    public function __construct(?LoopInterface $loop)
     {
         Utils::checkPrecision();
 
@@ -375,5 +375,10 @@ class Router implements RouterInterface, EventSubscriberInterface
     public function onMessage(TransportInterface $transport, Message $msg)
     {
         //not used anymore
+    }
+
+    public function getSessions()
+    {
+        return $this->sessions;
     }
 }
